@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outformatica - Break Free from Informatica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f0f23 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 60px 0 120px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #00d4ff;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
+        }
+
+        .problems {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .problems h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #ff4757;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: rgba(255, 71, 87, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #ff4757;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            background: rgba(255, 71, 87, 0.15);
+            transform: translateX(5px);
+        }
+
+        .problem-card h3 {
+            color: #ff4757;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .problem-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .solution {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .solution h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .benefit {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .benefit:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 212, 255, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .benefit h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .benefit p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .final-cta {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(123, 47, 247, 0.1) 100%);
+            margin-top: 80px;
+        }
+
+        .final-cta h2 {
+            font-size: 2.3em;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo floating">Outformatica</div>
+            <h1 class="tagline">Escape the Black Box</h1>
+            <p class="subtitle">Migrate your ETL from Informatica to real code</p>
+            <a href="#contact" class="cta-button">Break Free Now</a>
+        </header>
+
+        <section class="problems">
+            <h2>Your Informatica Pain Points</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>🔒 Vendor Lock-In</h3>
+                    <p>Your data pipeline is hostage to proprietary tools, licensing costs, and upgrade cycles you don't control.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>👻 Opaque Logic</h3>
+                    <p>Critical business transformations buried in GUI configurations that can't be versioned, reviewed, or understood without clicking through endless dialogs.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🐌 Debugging Nightmares</h3>
+                    <p>When something breaks at 3 AM, you're hunting through session logs and mapping debuggers instead of reading a stack trace.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💸 Escalating Costs</h3>
+                    <p>Per-core licensing that scales with your success. Your data grows, your bill explodes.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🎓 Talent Scarcity</h3>
+                    <p>Good luck hiring. Your job postings compete with the entire modern data stack while requiring niche proprietary expertise.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🔄 Integration Hell</h3>
+                    <p>Want to use modern tools? Better hope Informatica supports it, or prepare for hacky workarounds.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="solution">
+            <h2>Take Back Control</h2>
+            <p style="font-size: 1.2em; max-width: 800px; margin: 0 auto 60px; opacity: 0.9;">
+                Outformatica extracts your ETL logic from Informatica and transforms it into clean, maintainable Python, Spark, or dbt code. Your pipelines. Your infrastructure. Your terms.
+            </p>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Slash Costs</h3>
+                    <p>Eliminate license fees. Run on commodity hardware or cloud infrastructure at a fraction of the price.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🔍</div>
+                    <h3>Total Transparency</h3>
+                    <p>Every transformation in version control. Code review. Git blame. The way software should work.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Modern Performance</h3>
+                    <p>Native cloud integration. Autoscaling. Leverage the full power of modern distributed computing.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Hire Engineers, Not Specialists</h3>
+                    <p>Your job postings now compete for Python and SQL developers—the largest talent pool in data engineering.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Your Choice of Tools</h3>
+                    <p>Integrate with anything. Airflow, Prefect, Dagster—use the orchestration that fits your stack.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Faster Innovation</h3>
+                    <p>Deploy changes in minutes, not days. No more waiting for GUI-based approval workflows.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <h2>Stop Paying the Informatica Tax</h2>
+            <p>Let's discuss how Outformatica can liberate your data pipelines.</p>
+            <a href="#contact" class="cta-button">Schedule a Consultation</a>
+        </section>
+    </div>
+</body>
+</html>
